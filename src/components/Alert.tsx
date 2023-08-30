@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 interface AlertProps {
   children: ReactNode;
-  onClose: () => void;
+  onClose: (item?: string) => void;
 }
 
 function Alert({ children, onClose }: AlertProps) {
@@ -10,7 +10,7 @@ function Alert({ children, onClose }: AlertProps) {
     <div className="alert alert-primary alert-dismissible" role="alert">
       {children}
       <button
-        onClick={onClose}
+        onClick={() => onClose()}
         type="button"
         className="btn-close"
         data-bs-dismiss="alert"
