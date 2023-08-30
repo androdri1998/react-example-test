@@ -21,6 +21,7 @@ function App() {
         items={items}
         heading="Cities"
         onSelectItem={handleAlertVisibilty}
+        currentCity={currentCity}
       />
       {alertVisible && (
         <Alert onClose={handleAlertVisibilty}>
